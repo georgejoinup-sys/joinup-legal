@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; font-src data:;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Support for JoinUp by Testcamp Inc. — contact, sign-in help, reporting, blocking, and account deletion.">
+<title>JoinUp — Support</title>
+<style>
+  /* Palette aligned with the landing page — ported from src/theme/tokens.ts
+     (day = light, night = dark). Content styles below are unchanged. */
+  :root {
+    --bg: hsl(0, 0%, 100%); --fg: hsl(220, 15%, 15%); --muted: hsl(220, 8%, 50%);
+    --accent: hsl(152, 69%, 29%);
+    --card: hsl(0, 0%, 98%); --border: hsl(150, 10%, 88%);
+    --badge-bg: #fff3cd; --badge-fg: #7a5b00;
+    --c1: hsl(152, 75%, 55%); --c2: hsl(168, 70%, 50%); --c3: hsl(190, 75%, 60%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(220, 25%, 7%); --fg: hsl(152, 30%, 96%); --muted: hsl(220, 12%, 62%);
+      --accent: hsl(152, 90%, 52%);
+      --card: hsl(220, 22%, 11%); --border: hsl(220, 18%, 22%);
+      --badge-bg: #3a2f00; --badge-fg: #ffd75e;
+    }
+  }
+  @font-face {
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url(data:font/woff2;base64,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) format("woff2");
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+  nav.crumbs { margin-bottom: 28px; }
+  nav.crumbs a.brand {
+    display: inline-flex; align-items: center; gap: 9px;
+    color: var(--fg); text-decoration: none;
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em;
+  }
+  nav.crumbs svg { display: block; }
+  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 8px; }
+  h3 { font-size: 1.05rem; margin: 24px 0 6px; }
+  .meta { color: var(--muted); margin: 0 0 28px; font-size: 0.95rem; }
+  a { color: var(--accent); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .callout {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px; margin: 20px 0;
+  }
+  .callout p { margin: 0 0 8px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .toconfirm {
+    display: inline-block; background: var(--badge-bg); color: var(--badge-fg);
+    border-radius: 6px; padding: 1px 7px; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.03em; vertical-align: middle;
+  }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer nav { margin-bottom: 10px; }
+  footer nav a {
+    color: var(--fg); text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    margin-right: 20px;
+  }
+  footer nav a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <nav class="crumbs">
+    <a class="brand" href="index.html" aria-label="JoinUp home">
+      <svg width="26" height="26" viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="mkg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="var(--c1)"/>
+            <stop offset="0.5" stop-color="var(--c2)"/>
+            <stop offset="1" stop-color="var(--c3)"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#mkg)" d="M24 3C33.4 3 41 10.6 41 20c0 9.8-10.4 19.3-15.3 23.2a2.7 2.7 0 0 1-3.4 0C17.4 39.3 7 29.8 7 20 7 10.6 14.6 3 24 3Z"/>
+        <circle fill="var(--bg)" cx="24" cy="20" r="6.5"/>
+      </svg>
+      JoinUp
+    </a>
+  </nav>
+
+  <h1>Support</h1>
+  <p class="meta">JoinUp, by Testcamp Inc.</p>
+
+  <h2>Contact us</h2>
+  <div class="callout">
+    <p><strong>Email:</strong> <a href="mailto:support@joinup.com">support@joinup.com</a></p>
+    <p>This mailbox is monitored by a person, and we answer every message.</p>
+    <p>When you write to us, include: the phone number on your account (or the last 4 digits), your device model and OS version, and a short description of what happened — screenshots help.</p>
+  </div>
+
+  <h2>Safety and moderation</h2>
+  <p>JoinUp has zero tolerance for objectionable content and abusive users. Every user profile has in-app <strong>Report</strong> and <strong>Block</strong> actions, and we act on reports <strong>within 72 hours</strong> — removing content and ejecting offending users where a report is substantiated. Details are in our <a href="terms.html">Terms of Service</a>.</p>
+
+  <h3>How do I report someone?</h3>
+  <ol>
+    <li>Open the person's profile from a Joinup or Group you share.</li>
+    <li>Tap <strong>Report</strong>.</li>
+    <li>Choose a reason (spam, harassment, inappropriate content, or other) and optionally add a note.</li>
+  </ol>
+  <p>Reports are confidential: the person you report is never told who reported them. Our team reviews every report and acts within 72 hours.</p>
+
+  <h3>How do I block someone?</h3>
+  <ol>
+    <li>Open the person's profile.</li>
+    <li>Tap <strong>Block</strong> and confirm.</li>
+  </ol>
+  <p>Blocking stops new direct messages and notification detail from that person. You can see everyone you've blocked, and unblock them, from your settings. Anonymous posts in a Community stay visible after a block, because hiding them would reveal who wrote them; report those instead. If someone is behaving abusively, please also report them so we can act.</p>
+
+  <h2>Account</h2>
+
+  <h3>I'm not receiving my SMS sign-in code</h3>
+  <ul>
+    <li>Check that you entered your phone number correctly, including the country code.</li>
+    <li>Wait a minute — SMS delivery can lag — then request a new code. Only the newest code is valid.</li>
+    <li>Make sure your device has signal and can receive SMS from short codes / international senders (some carriers or blocking apps filter these).</li>
+    <li>Still stuck? Email us with your number and carrier and we'll investigate delivery on our side.</li>
+  </ul>
+
+  <h3>How do I change my name?</h3>
+  <p>Open the <strong>Profile</strong> tab and tap your name to edit it. JoinUp has no profile picture — your avatar is your initials, drawn on your phone from the name you set, so changing your name changes it.</p>
+
+  <h3>How do I delete my account?</h3>
+  <ol>
+    <li>Open the <strong>Profile</strong> tab.</li>
+    <li>Scroll down and tap <strong>Delete account</strong>.</li>
+    <li>Confirm. Deletion is immediate and permanent.</li>
+  </ol>
+  <p>Deleting your account cancels your Joinups, removes you from rosters, anonymizes your profile, and removes your invites, memberships, and device tokens. Your phone number is cleared from your account record. See the <a href="privacy.html">Privacy Policy</a> for details. No email or phone call needed — deletion is fully self-service inside the app.</p>
+
+  <h2>Joinups and notifications</h2>
+
+  <h3>Why can't I see older messages in a chat?</h3>
+  <p>By design, your view of a Joinup's chat starts from the moment you joined it. Messages sent before you joined are not shown to you.</p>
+
+  <h3>Who can see an anonymous Joinup's guest list?</h3>
+  <p>Anonymity covers who <em>created</em> the Joinup, and only while it is still filling up: until then people see how many are in, not whose idea it was. When the Joinup locks in, the host's name is shown to everyone who can see it, and that cannot be undone — the app tells you so before you post. Everyone confirmed for a Joinup is a visible member of it either way.</p>
+
+  <h3>How do I control notifications?</h3>
+  <p>You can enable or disable push notifications in your device's system settings for JoinUp, and adjust notification preferences (including quiet hours) in the app's Profile settings.</p>
+
+  <h3>Why does JoinUp ask for my location?</h3>
+  <p>To show Joinups near you and to search for venues, while the app is open — and, if you switch on arrival sharing for a particular Joinup, to show the people confirmed for that Joinup that you are on your way, until it ends. All of it is optional, and JoinUp never tracks your location in the background.</p>
+
+  <h2>More</h2>
+  <ul>
+    <li><a href="privacy.html">Privacy Policy</a> — what we collect and how to delete it.</li>
+    <li><a href="terms.html">Terms of Service</a> — the rules of JoinUp.</li>
+  </ul>
+
+  <footer>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+    <p>JoinUp is owned and operated by Testcamp Inc. &copy; 2026 Testcamp Inc.</p>
+  </footer>
+</main>
+</body>
+</html>
