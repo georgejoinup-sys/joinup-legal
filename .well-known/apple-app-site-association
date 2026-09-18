@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["FXMWR8QZC3.com.testcamp.joinup"],
+        "components": [
+          {
+            "/": "/join",
+            "comment": "Invite links: /join?h=<id>&code=<token> and /join?h=<id>#code=<token>&exp=<ms>. The path is exactly /join, so no wildcard; the query and fragment are left unspecified on purpose, which is what makes one entry cover both shapes. Never fold the query into this pattern - ? is a literal character in a path pattern and no path contains one."
+          },
+          {
+            "/": "/recap/*",
+            "comment": "Recap links: /recap/<uuid>. The id is in the PATH, so this entry needs the trailing /* that the /join entry must not have."
+          }
+        ]
+      }
+    ]
+  }
+}

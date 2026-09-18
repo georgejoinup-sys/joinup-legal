@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; form-action 'none'; base-uri 'none';">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2048%2048'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='hsl(152,75%25,55%25)'/%3E%3Cstop%20offset='.5'%20stop-color='hsl(168,70%25,50%25)'/%3E%3Cstop%20offset='1'%20stop-color='hsl(190,75%25,60%25)'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20fill='url(%23g)'%20d='M24%203C33.4%203%2041%2010.6%2041%2020c0%209.8-10.4%2019.3-15.3%2023.2a2.7%202.7%200%200%201-3.4%200C17.4%2039.3%207%2029.8%207%2020%207%2010.6%2014.6%203%2024%203Z'/%3E%3Ccircle%20cx='24'%20cy='20'%20r='6.5'%20fill='hsl(220,25%25,7%25)'/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Privacy Policy for JoinUp by Testcamp Inc.">
@@ -55,7 +56,7 @@
   <nav class="crumbs"><a href="index.html">&larr; JoinUp legal &amp; support</a></nav>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">JoinUp, by Testcamp Inc. &middot; Last updated: August 17, 2026</p>
+  <p class="meta">JoinUp, by Testcamp Inc. &middot; Last updated: September 15, 2026</p>
 
   <p>JoinUp is an app for organizing spontaneous hangouts ("Joinups") with people you know. This policy explains what information we collect, why we collect it, who we share it with, and how you can delete it. We have tried to keep it short and honest.</p>
 
@@ -82,7 +83,7 @@
   <p>JoinUp does not track your location in the background, and never asks for background location permission.</p>
 
   <h3>Content you create</h3>
-  <p>Joinups you post, RSVPs, group and community memberships, messages you send in a Joinup's chat or in a conversation, photos you send, and reports you file about someone. Chat messages are visible to the other participants of that chat. When you join a Joinup's chat, your view of its history starts from the point you joined. Messages and photos are protected in transit and by access rules enforced on our servers, but they are <strong>not</strong> end-to-end encrypted — our servers can read them. Treat a JoinUp chat like any ordinary group chat.</p>
+  <p>Joinups you post, the Joinups you join, group and community memberships, messages you send in a Joinup's chat or in a conversation, photos you send, and reports you file about someone. Chat messages are visible to the other participants of that chat. When you join a Joinup's chat, your view of its history starts from the point you joined. Messages and photos are protected in transit and by access rules enforced on our servers, but they are <strong>not</strong> end-to-end encrypted — our servers can read them. Treat a JoinUp chat like any ordinary group chat.</p>
 
   <h3>Contacts</h3>
   <p>You can add people on JoinUp by typing their phone number. You can also let JoinUp look through your phone's contacts to find people you already know &mdash; that happens only when you ask for it, and only if you grant the contacts permission. When you do, JoinUp reads the phone numbers in your contacts, turns each one into a one-way code on your phone, and sends those codes to our servers to check which ones have a JoinUp account. The names you have saved never leave your phone. You can decline, and JoinUp works without it.</p>
@@ -98,6 +99,12 @@
 
   <h3>How you use the app</h3>
   <p>We keep a record of what JoinUp put in front of you — which Joinups and places we showed you, where they sat on the screen, and whether you opened or joined them. We use it to get better at choosing what to show you. It holds no message text and no trail of where you have been, and it is not used to follow you into other apps or websites.</p>
+
+  <h3>Identity verification</h3>
+  <p>When JoinUp asks you to verify your identity, which happens before you first host or join a Joinup, the check is run by an identity-verification provider. You take a short video selfie and photograph a government identity document, and those go from your phone to the provider, not to JoinUp. The provider confirms that a live person took the selfie, that the document is genuine and matches the selfie, and that you are 18 or over. Where the check includes screening, the provider also checks the name and date of birth on the document against sanctions and warning lists; that screening is not a criminal-record check. JoinUp never receives or stores your selfie, the document images, or the details read from the document: we keep only the outcome of each step, when it happened, and a reference number for the check. When you delete your account, we remove those results from your account, ask the provider to delete everything it holds from your check, and keep only a note that the deletion was requested and when, so the check cannot be restored later. The one exception is an account banned for serious harm: the provider keeps only the face data from that check while the ban stands, and deletes the rest.</p>
+
+  <h3>Business pages</h3>
+  <p>If you claim a business page on JoinUp or help manage one, we keep a record of each claim: who made it, when, the verification method used, and the evidence given for it, such as the result of a code sent to a phone number or address already listed for the business, or documents showing that you own or run the business. We also keep a record of which JoinUp accounts manage each page. We use these records to decide, review and protect claims, to resolve disagreements about who manages a page, and to enforce the <a href="business-terms.html">JoinUp Business Terms</a>, and we keep them while the claim stands and afterwards for as long as those purposes or the law require.</p>
 
   <!-- Editing note for maintainers is in docs/store/site/README.md. -->
   <h2>3. What we do <em>not</em> do</h2>
@@ -122,17 +129,20 @@
   <p>Anonymity covers the act of creating a Joinup, and nothing wider. It does not hide the Joinup itself, and it does not hide who is in it: everyone confirmed for a Joinup is a visible member of it, including the person who created it.</p>
 
   <h2>6. Who we share information with</h2>
-  <p>We share personal information only with the service providers we need to run JoinUp, and only for that purpose:</p>
+  <p>Depending on the feature you use, JoinUp may share information with the following categories of recipients for the purposes described:</p>
   <ul>
-    <li><strong>Supabase</strong> — hosts our database, file storage and backend infrastructure, where your account data, your content and your photos are stored.</li>
-    <li><strong>Twilio</strong> — processes your phone number to deliver SMS verification codes (Twilio Verify).</li>
-    <li><strong>Expo</strong> — delivers push notifications to your device and serves app updates.</li>
-    <li><strong>Apple</strong> — delivers push notifications to iPhones, and turns coordinates into a place name (and an address you type into coordinates) when you use the area picker.</li>
-    <li><strong>Google</strong> — answers venue searches and provides map images and place photos. It receives the area you are searching in, rounded to roughly 11 metres before it leaves your phone.</li>
-    <li><strong>OpenStreetMap</strong> — answers venue searches where Google is not used, and receives the same rounded area.</li>
-    <li><strong>Cloudflare</strong> — relays call audio when two phones cannot connect to each other directly. It passes the sound through in real time and does not store it.</li>
+    <li><strong>Cloud hosting, storage and backend providers</strong> — receive account information, content, files and technical request data to store and process JoinUp data, run backend functions and keep the service available.</li>
+    <li><strong>Phone-verification providers</strong> — receive your phone number and the verification information needed to send and check sign-in codes.</li>
+    <li><strong>Notification and app-update providers</strong> — receive device and app information and, for notifications, the message content needed to deliver notifications and app updates.</li>
+    <li><strong>Place-search, mapping and geocoding providers</strong> — receive the place you type, the area you search and related map or venue requests to return place names, addresses, venue results, maps and photos. When your device location is used for a venue search, it is rounded to roughly 11 metres before it is sent.</li>
+    <li><strong>Calling and connectivity providers</strong> — receive connection information and, when a call needs a relay, the call audio in transit so the call can connect.</li>
+    <li><strong>Content-processing providers</strong> — receive the JoinUp content selected for automated processing to enrich it for app features.</li>
+    <li><strong>Website, legal-page and invite-link hosting providers</strong> — receive the page or link request and related technical information to serve JoinUp pages and invitations.</li>
+    <li><strong>Calendar, messaging and other destinations you choose</strong> — receive the event, file, link or message information you direct JoinUp to send or open so they can perform the action you requested. A calendar link can include the Joinup title and start and end time; a calendar file you choose to share can also include its place.</li>
+    <li><strong>Security, identity-verification and diagnostic providers</strong> — when one of these features is used, receive the account, identity, technical, usage or error information needed to prevent abuse, verify identity, secure JoinUp and diagnose problems.</li>
+    <li><strong>Businesses on JoinUp</strong> — when you book with a business through JoinUp or review it, that business sees your booking or review and the booking name or review name JoinUp shows it, and nothing else about you.</li>
   </ul>
-  <p>These providers process data on our behalf under their own contractual and security obligations. Beyond this, we disclose personal information only if required by law, or to protect the rights, safety, or security of our users or the service.</p>
+  <p>Service providers process information for the purposes described above. Destinations you choose process what you send under their own terms and privacy practices. We may also disclose personal information when required by law or when reasonably necessary to protect the rights, safety, or security of our users or the service.</p>
 
   <!-- Editing note for maintainers is in docs/store/site/README.md. -->
   <h2 id="retention">7. Retention and account deletion</h2>
